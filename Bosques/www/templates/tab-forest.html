@@ -1,0 +1,17 @@
+<ion-view view-title="Bosques">
+  <ion-content>
+     <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="forest in forests" type="item-text-wrap" href="#/tab/forest/{{forest.id}}">
+        <img ng-src="{{forest.face}}">
+        <h2>{{forest.name}}</h2>
+        <p>{{forest.subtitle}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(forest)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+       
+    </ion-list>
+  </ion-content>
+</ion-view>

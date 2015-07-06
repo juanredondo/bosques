@@ -1,0 +1,23 @@
+<!--
+Create tabs with an icon and label, using the tabs-stable style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-stable">
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="Novedades" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse" href="#/tab/dash">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="Bosques" icon-off="ion-ios-search" icon-on="ion-ios-search" href="#/tab/forest">
+    <ion-nav-view name="tab-forest"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Map Tab -->
+  <ion-tab title="Seguimiento de ruta" icon-off="ion-compass" icon-on="ion-compass" href="#/tab/map">
+    <ion-nav-view name="tab-map"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
