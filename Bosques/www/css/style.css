@@ -2,3 +2,8 @@
 title {
    font-family: 'Fredericka the Great' !important;
 }
+
+.scroll, .angular-leaflet-map {
+  height: 100%;
+  width: 100%
+}
