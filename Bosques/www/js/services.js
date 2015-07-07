@@ -21,8 +21,8 @@ angular.module('starter.services', [])
     face: 'img/villuercas.jpg'
   }, {
     id: 3,
-    name: 'Castañar Gallego de Hervás',
-    subtitle: 'Castañas traigo',
+    name: 'Castanar Gallego de Hervas',
+    subtitle: 'Castanas traigo',
     face: 'img/castanar.jpg' 
   }];
 

@@ -58,7 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
     })
       .state('tab.forest-detail', {
-          url: '/forests/:fId',
+          url: '/forest/:fId',
           views: {
               'tab-forest': {
                   templateUrl: 'templates/forest-detail.html',
