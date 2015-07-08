@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'leaflet-directive', 'ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'leaflet-directive', 'ngCordova', 'ui.router'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -75,7 +75,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 controller: 'MapCtrl'
             }
         }
-    });
+    })
+
+    .state('tab.paths', {
+        url: '/paths/:forestId',
+        views: {
+            'tab-path': {
+                templateUrl: 'templates/tab-path.html',
+                controller: 'PathCtrl'
+            }
+        }
+    })
+
+     .state('tab.path-detail', {
+         url: '/path/:pathId',
+         views: {
+             'tab-path': {
+                 templateUrl: 'templates/path-detail.html',
+                 controller: 'PathDetailCtrl'
+             }
+         }
+     });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/dash');

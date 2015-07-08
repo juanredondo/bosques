@@ -1,0 +1,31 @@
+﻿
+<ion-view view-title="{{forest.name}}">
+  <ion-content class="padding">
+      <button class="button button-outline button-full button-positive">
+          Rutas Recomendadas <i class="icon ion-chevron-right icon-accessory"></i>
+      </button>
+      <div class="list card">
+          <div class="item item-body">
+              <img ng-src="{{forest.big}}" class="full-image">
+              <p>
+                  {{forest.text}}
+              </p>
+          </div>
+          <div class="item item-body">
+              <p>
+                  {{forest.directions}}
+              </p>
+              <img ng-src="{{forest.map}}" class="full-image">
+              <p>
+                  {{forest.description}}
+              </p>
+          </div>
+          <div class="item item-body">
+              <img ng-src="{{forest.place}}" class="full-image">
+              <p>
+                  {{forest.placetext}}
+              </p>
+          </div>
+          </div>
+</ion-content>
+</ion-view>

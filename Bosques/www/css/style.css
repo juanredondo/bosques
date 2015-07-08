@@ -1,7 +1,11 @@
 /* Empty. Add your own CSS if you like */
-title {
+.title, .item, .ng-binding .button{
    font-family: 'Fredericka the Great' !important;
 }
+
+/*a{
+    text-decoration: none;
+}*/
 
 .scroll, .angular-leaflet-map {
   height: 100%;

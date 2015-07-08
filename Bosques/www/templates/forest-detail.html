@@ -1,14 +1,32 @@
-<!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
--->
+﻿
 <ion-view view-title="{{forest.name}}">
-  <ion-content class="padding">
-    <img ng-src="{{forest.face}}" style="width: 100%">
-    <p>
-      {{forest.subtitle}}
-    </p>
-  </ion-content>
+  <ion-content>
+      <div class="list card">
+          <div class="item item-body">
+              <img ng-src="{{forest.big}}" class="full-image">
+              <button class="button icon-left ion-compass button-outline button-full button-positive"
+                      ui-sref="tab.paths({forestId: forest.id})" ng-href="#/tab/paths/{{forest.id}}">
+                  Rutas Recomendadas <i class="icon ion-chevron-right icon-accessory"></i>
+              </button>
+              <p>
+                  {{forest.text}}
+              </p>
+          </div>
+          <div class="item item-body">
+              <p>
+                  {{forest.directions}}
+              </p>
+              <img ng-src="{{forest.map}}" class="full-image">
+              <p>
+                  {{forest.description}}
+              </p>
+          </div>
+          <div class="item item-body">
+              <img ng-src="{{forest.place}}" class="full-image">
+              <p>
+                  {{forest.placetext}}
+              </p>
+          </div>
+          </div>
+</ion-content>
 </ion-view>

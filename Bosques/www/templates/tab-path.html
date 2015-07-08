@@ -1,0 +1,12 @@
+﻿<ion-view view-title="Rutas">
+  <ion-content>
+     <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="path in paths" type="item-text-wrap" href="#/tab/forest/{{forest.id}}">
+        <img ng-src="{{path.map}}">
+        <h2>{{forest.name}}</h2>
+        <p>{{forest.subtitle}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

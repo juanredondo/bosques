@@ -11,16 +11,19 @@ angular.module('starter.controllers', [])
 
 .controller('ForestDetailCtrl', function ($scope, $stateParams, ForestsFactory) {
     $scope.forest = ForestsFactory.get($stateParams.fId);
+    $scope.go = function (forestId) {
+        $state.go('tab.path', [forestId]);
+    };
 })
 
-/*.controller('MapCtrl', function($scope) {
-    $scope.map = L.map('map').setView([37.8, -96], 4);            
-    L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
-        attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        subdomains: '1234'
-    }).addTo($scope.map);
-});*/
 
+.controller('PathCtrl', function ($scope, PathFactory, ForestId) {
+    $scope.paths = PathFactory.all(ForestId);
+})
+
+ .controller('PathDetailCtrl', function ($scope, $stateParams, PathFactory) {
+     $scope.path = PathFactory.get($stateParams.pathId);
+ })
 
 .controller('MapCtrl',
   [ '$scope',
@@ -109,6 +112,19 @@ angular.module('starter.controllers', [])
               }, function (err) {
                   // error
                   console.log("Location error!");
+                  $scope.map.center = {
+                      lat: 40,
+                      lng: -3,
+                      zoom: 15
+                  };
+
+                  $scope.map.markers.now = {
+                      lat: 40,
+                      lng: -3,
+                      message: 'Mi localizacion',
+                      focus: true,
+                      draggable: false
+                  };
                   console.log(err);
               });
 
