@@ -1,28 +1,40 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function ($scope) {
+    $scope.news = [
+        {
+            id: 0,
+            img: 'img/serrania.jpg',
+            title: 'Ultimas Rutas',
+            text:'Ruta por la Serrania de Cuenca'
+        },
+        {
+            id: 1,
+            img: 'img/tejeranegra.jpg',
+            title: 'Bosque Recomendado',
+            text:'En esta época del año es muy recomendable visitar los hayedos para pasear tranquilamente a la sombra'
+        }
+    ];
+})
 
 .controller('ForestCtrl', function ($scope, ForestsFactory) {
   $scope.forests = ForestsFactory.all();
-  $scope.remove = function (forest) {
-      ForestsFactory.remove(forest);
-  }
 })
 
 .controller('ForestDetailCtrl', function ($scope, $stateParams, ForestsFactory) {
     $scope.forest = ForestsFactory.get($stateParams.fId);
-    $scope.go = function (forestId) {
-        $state.go('tab.path', [forestId]);
-    };
 })
 
 
-.controller('PathCtrl', function ($scope, PathFactory, ForestId) {
-    $scope.paths = PathFactory.all(ForestId);
+.controller('PathCtrl', function ($scope, PathsFactory) {
+    $scope.paths = PathsFactory.all();
 })
 
- .controller('PathDetailCtrl', function ($scope, $stateParams, PathFactory) {
-     $scope.path = PathFactory.get($stateParams.pathId);
+ .controller('PathDetailCtrl', function ($scope, $stateParams, PathsFactory) {
+     $scope.path = PathsFactory.get($stateParams.pathId);
+     $scope.goPath = function (gpx) {
+         localStorage['path'] = gpx;
+     }
  })
 
 .controller('MapCtrl',
@@ -63,6 +75,10 @@ angular.module('starter.controllers', [])
                 }
             };
              $scope.locate();
+             if (localStorage['path'] != null) {
+                 var map = L.mapbox.map('map');
+                 omnivore.csv(localStorage['path']);
+             }
         });
 
         var Location = function () {

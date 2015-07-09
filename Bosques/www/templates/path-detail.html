@@ -1,31 +1,34 @@
 ﻿
-<ion-view view-title="{{forest.name}}">
+<ion-view view-title="{{path.name}}">
   <ion-content class="padding">
-      <button class="button button-outline button-full button-positive">
-          Rutas Recomendadas <i class="icon ion-chevron-right icon-accessory"></i>
-      </button>
       <div class="list card">
           <div class="item item-body">
-              <img ng-src="{{forest.big}}" class="full-image">
+            <div class="item item-divider fredericka-bold">Descripción</div>
+              <img ng-src="{{path.big}}" class="full-image">
               <p>
-                  {{forest.text}}
+                  {{path.text}}
               </p>
           </div>
+          <div class="item item-divider fredericka-bold">Como llegar</div>
           <div class="item item-body">
               <p>
-                  {{forest.directions}}
-              </p>
-              <img ng-src="{{forest.map}}" class="full-image">
-              <p>
-                  {{forest.description}}
+                  {{path.directions}}
               </p>
           </div>
+          <div class="item item-divider fredericka-bold">Ficha técnica</div>
           <div class="item item-body">
-              <img ng-src="{{forest.place}}" class="full-image">
-              <p>
-                  {{forest.placetext}}
-              </p>
+            <p><b>Dificultad: </b>{{path.dificulty}}</p>
+            <p><b>Longitud: </b>{{path.length}}km</p>
+            <p><b>Desnivel: </b>{{path.gradient}}m</p>
+            <p><b>Duración estimada: </b>{{path.time}}h</p>
+        </div>
+          <div class="item item-body">
+              <img ng-src="{{path.map}}" class="full-image">
+               <button class="button icon-left ion-compass button-outline button-full button-positive"  ng-click="goPath" ui-sref="tab.map">
+                      Seguir esta ruta <i class="icon ion-chevron-right icon-accessory"></i>
+                  </button>
           </div>
-          </div>
+
+    </div>
 </ion-content>
 </ion-view>

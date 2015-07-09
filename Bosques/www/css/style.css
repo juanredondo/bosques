@@ -1,6 +1,16 @@
 /* Empty. Add your own CSS if you like */
-.title, .item, .ng-binding .button{
+.title, .button{
    font-family: 'Fredericka the Great' !important;
+    font-weight: bold;
+}
+
+.fredericka {
+   font-family: 'Fredericka the Great' !important;
+}
+
+.fredericka-bold {
+   font-family: 'Fredericka the Great' !important;
+   font-weight: bold;
 }
 
 /*a{

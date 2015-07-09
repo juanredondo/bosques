@@ -1,9 +1,9 @@
 ﻿<ion-view view-title="Bosques">
   <ion-content>
      <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="forest in forests" type="item-text-wrap" href="#/tab/forest/{{forest.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="forest in forests" type="item-text-wrap"  ui-sref="tab.forest-detail({fId: forest.id})" >
         <img ng-src="{{forest.face}}">
-        <h2>{{forest.name}}</h2>
+        <h2 class="fredericka-bold">{{forest.name}}</h2>
         <p>{{forest.subtitle}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>

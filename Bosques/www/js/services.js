@@ -1,9 +1,6 @@
 ﻿angular.module('starter.services', [])
 
 .factory('ForestsFactory', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
   var forests = [{
     id: 0,
     name: 'Serrania de Cuenca',
@@ -52,7 +49,7 @@
     text: 'Ubicado en el valle de Ambroz, al norte de la provincia de Cáceres, el Monte Público de Castañar Gallego contiene una de las formaciones de esta especie más extensas y mejor conservadas del sur penínsular. El nombre del monte hace referencia, según parece, a su antigua propietaria, que provenía de esta región peninsular. Los castañares son uno de los bosques más bellos que se desarrollan en nuestro territorio. Las copas de esta especie se abren en forma de abanico, conformando una gran densidad en zonas elevadas, y creando así un espacio sombreado y húmedo, muy característico de los bosques atlánticos. En este caso destacan además algunos ejemplares de gran longevidad y gran tamaño, con diametros de tronco realmente espectaculares. Este monte público, se localiza junto a la bella población de Hervás, una coqueta localidad en la que se asienta una popular judería que desciende suavemente por la ladera desde la zona más elevada de la población hasta el cauce del río Ambroz.',
     placetext: 'Hervás es un pequeño y recoleto pueblo serrano, que se asienta sobre la ladera sur del Sistema Central. Sus calles descienden desde la zona alta donde se localiza la plaza y la iglesia, hacia el cauce del río Ambroz.Y en este descenso suave y amable, vamos descubriendo lo que fue el barrio judío de la localidad, un bello conjunto de calles estrechas (de hecho se dice que aquí se encuentra la calle más estrecha del país) y construcciones populares en adobe y entramado de madera. Algunas de las calles a visitar sería la del Vao (junto al río) y la de la Amistad, además de las iglesias de Santa María y de San Juan Bautista.Unos pocos kilómteros al norte de Hervás, se localizan las poblaciones de Béjar y Candelario con buenas muestras de arquitectura popular serrana, mientras que al sur localizamos Plasencia con un rico patrimonio monumental.',
     description: 'El castaño es un árbol apreciado tanto por su madera como por su fruto. Bien es sabido que hasta la llegada de la patata y el maiz de América fue una de las principales fuentes energéticas en Europa. Dada esta importancia de recursos, es lógico que sea un árbol que se haya difundido desde antiguo por la mano del hombre. En España existe controversia sobre su grado de naturalidad en el territorio, si bien lo que es cierto es que es un árbol que se extiende por buena parte del territorio, especialmente por el oeste peninsular. El castañar gallego de Hervás es uno de los más extensos y mejor conservados de la mitad sur peninsular. Es además muy accesible y se localiza junto a uno bella población, lo que hace que aumente su interés.   Se trata de un castañar que ocupa unas 300 Ha, en el que encontramos grandes ejemplares, a pesar del aprovechamiento maderero al que ha sido sometido. Junto al castaño localizamos acebo y arec, además de rusco, zarza o helechos. También se localizan algunos ejemplares de melojo y destacar finalmente la presencia de un magnifico ejemplar de haya, el Haya del Cristo de la Salud, la única de gran porte que se localiza en Extremadura. Este espacio esta en trámite de convertirse en Paisaje Protegido.Destacar además el contiguo castañar del Duque y en la cercana población de Segura del Toro, 5 magníficos ejemplares de castaño, de grandes troncos y perfil rudo, que muestran una antigüedad de entre 500-700 años.',
-    directions: 'La población de Hervás se encuentra bien comunicada por la A-66, junto a la que se localiza. Para acceder al castañar desde Hervás podemos tomar la carretera que asciende al puerto de Honduras (que comunica con el valle del Jerte) o bien la carretera a Gargantilla. Ambas se introducen en el castañar, si bien podemos tomar ruta a pie desde la propia población de Hervás.'  
+    directions: 'La población de Hervás se encuentra bien comunicada por la A-66, junto a la que se localiza. Para acceder al castañar desde Hervás podemos tomar la carretera que asciende al puerto de Honduras (que comunica con el valle del Jerte) o bien la carretera a Gargantilla. Ambas se introducen en el castañar, si bien podemos tomar ruta a pie desde la propia población de Hervás.'
   }];
 
   return {
@@ -73,11 +70,11 @@
   };
 })
 
-.factory('PathFactory', function() {
+.factory('PathsFactory', function() {
     var paths = [
         {
-            id: 0, 
-            forestId: 0, 
+            id: 0,
+            forestId: 0,
             map: 'img/serrania-route-map.jpg',
             name: 'Entorno Tia Perra y Cerviñuelo',
             subtitle: 'Ruta larga',
@@ -85,11 +82,13 @@
             directions: 'Desde Cuenca por la CM-2110  y CUV-9113 dirección Las Majadas. Una vez en esta población seguimos dirección El Hosquillo.',
             length: 13,
             time: 4.5,
-            gradient: 350
+            gradient: 350,
+            dificulty: 'Media',
+            gpx: 'gpx/larga.gpx'
         },
         {
-            id: 0, 
-            forestId: 0, 
+            id: 1,
+            forestId: 0,
             map: 'img/serrania-route-map.jpg',
             name: 'Entorno Tia Perra y Cerviñuelo',
             subtitle: 'Ruta corta',
@@ -97,15 +96,17 @@
             directions: 'Desde Cuenca por la CM-2110  y CUV-9113 dirección Las Majadas. Una vez en esta población seguimos dirección El Hosquillo.',
             length: 10,
             time: 3,
-            gradient: 80
+            gradient: 80,
+            dificulty: 'Media-baja',
+            gpx: 'gpx/corta.gpx'
         },
     ];
- 
+
     return {
-        all: function(forestId) {
+        all: function() {
             return paths;
         },
-        get: function(wayId) {
+        get: function(pathId) {
             for (var i = 0; i < paths.length; i++) {
                 if (paths[i].id === parseInt(pathId)) {
                     return paths[i];

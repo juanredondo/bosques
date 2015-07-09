@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'leaflet-directive', 'ngCordova', 'ui.router'])
+angular.module('starter', ['ionic', 'ui.router','starter.controllers', 'starter.services', 'leaflet-directive', 'ngCordova'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -77,8 +77,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
     })
 
-    .state('tab.paths', {
-        url: '/paths/:forestId',
+    .state('tab.path', {
+        url: '/path',
         views: {
             'tab-path': {
                 templateUrl: 'templates/tab-path.html',
