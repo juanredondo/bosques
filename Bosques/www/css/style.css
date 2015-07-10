@@ -17,7 +17,7 @@
     text-decoration: none;
 }*/
 
-.scroll, .angular-leaflet-map {
+.scroll, .angular-leaflet-map, .leaflet-container{
   height: 100%;
   width: 100%
 }

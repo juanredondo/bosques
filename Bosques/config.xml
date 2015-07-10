@@ -100,4 +100,6 @@
   <preference name="android-targetSdkVersion" value="20" />
   <vs:plugin name="org.apache.cordova.statusbar" version="0.1.10" />
   <vs:plugin name="org.apache.cordova.geolocation" version="0.3.12" />
+  <vs:plugin name="org.apache.cordova.device-motion" version="0.2.11" />
+  <vs:plugin name="org.apache.cordova.dialogs" version="0.3.0" />
 </widget>

@@ -10,5 +10,17 @@
             "type": "registry",
             "id": "org.apache.cordova.statusbar"
         }
+    },
+    "org.apache.cordova.device-motion": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.device-motion"
+        }
+    },
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.dialogs"
+        }
     }
 }
