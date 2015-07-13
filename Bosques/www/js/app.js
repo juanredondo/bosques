@@ -20,20 +20,7 @@ angular.module('starter', ['ionic', 'ui.router', 'starter.controllers.dash', 'st
             // org.apache.cordova.statusbar required
             StatusBar.styleLightContent();
         }
-        window.plugin.notification.local.onadd = function (id, state, json) {
-            var notification = {
-                id: id,
-                state: state,
-                json: json
-            };
-            $timeout(function () {
-                $rootScope.$broadcast("$cordovaLocalNotification:added", notification);
-            });
-        };
-
-         if(device.platform === "iOS") {
-             window.plugin.notification.local.promptForPermission();
-        }
+        
     });
 })
 
@@ -94,7 +81,7 @@ angular.module('starter', ['ionic', 'ui.router', 'starter.controllers.dash', 'st
     })
 
     .state('tab.path', {
-        url: '/path',
+        url: '/paths/:fId',
         views: {
             'tab-path': {
                 templateUrl: 'templates/tab-path.html',

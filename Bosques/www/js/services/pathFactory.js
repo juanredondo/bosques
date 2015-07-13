@@ -133,6 +133,15 @@
         all: function() {
             return paths;
         },
+        allByForest: function (forestId) {
+            var pathsfiltered = [];
+            for (var i = 0; i < paths.length; i++) {
+                if (paths[i].forestId === parseInt(forestId)) {
+                    pathsfiltered.push(paths[i]);
+                }
+            }
+            return pathsfiltered;
+        },
         get: function(pathId) {
             for (var i = 0; i < paths.length; i++) {
                 if (paths[i].id === parseInt(pathId)) {
