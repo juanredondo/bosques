@@ -22,5 +22,18 @@
             "type": "registry",
             "id": "org.apache.cordova.dialogs"
         }
+    },
+    "de.appplant.cordova.plugin.local-notification": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/katzer/cordova-plugin-local-notifications.git",
+            "subdir": "."
+        }
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.device"
+        }
     }
 }

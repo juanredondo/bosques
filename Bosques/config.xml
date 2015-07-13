@@ -102,4 +102,5 @@
   <vs:plugin name="org.apache.cordova.geolocation" version="0.3.12" />
   <vs:plugin name="org.apache.cordova.device-motion" version="0.2.11" />
   <vs:plugin name="org.apache.cordova.dialogs" version="0.3.0" />
+  <vs:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.2dev" />
 </widget>

@@ -6,7 +6,7 @@
             id: 0,
             forestId: 0,
             map: 'img/serrania-route-map.jpg',
-            name: 'Entorno Tia Perra y Cerviñuelo',
+            name: 'Tia Perra y Cerviñuelo',
             subtitle: 'Ruta larga',
             text:'De las posibles rutas para descubrir las singularidades botánicas de este espacio natural proponemos este recorrido que nos permite conocer una fabulosa formación de Arce de Montepellier, posiblemente la única presente en la península en la que esta especie es dominante. Se trata de una ruta fácil, que nos conduce hasta un entorno de gran belleza en el que junto a los ejemplares adehesados de Arce de gran tamaño y espectacularidad, podemos tambien observar ejemplares de quejigo igualmente magníficos en porte y tamaño así como los cortados de calizas tableadas que el paso del naciente río Trabaque han conformado. Planteamos la ruta de 2 formas posibles, bien de manera más corta, dirigiendonos directamente hacia la zona de la Dehesa, o bien de forma circular en un recorrido más extenso, que nos permite observar otras interesantisimas muestras del paisaje y botánica local, como la salto del agua del Trabaque. Para la ruta corta dejamos el coche poco antes del cruce con El Hosquillo. Seguimos por una pista ancha entre zonas de pinar abierto (podemos observar tanto pino laricio como pino silvestre). Tras poco más de 3 Km estaremos en la Muela, donde poder observar los primeros ejemplares. ',
             directions: 'Desde Cuenca por la CM-2110  y CUV-9113 dirección Las Majadas. Una vez en esta población seguimos dirección El Hosquillo.',
@@ -18,11 +18,11 @@
             pois:
                 [
                     {
-                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque', 
+                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque', marker: 'img/trabaque-marker.png',
                         text: 'En el puntal del Perdigano un incipiente Trabaque se precipita al vacio, en un impresionante salto de agua sobre las dolomitas tableadas de decenas metros'
                     },
                     {
-                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier',
+                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier', marker: 'img/arce-marker.png',
                         text: 'El arce de Montepelier es un pequeño arbolillo, muy característico por sus hojas trilobuladas (con tres lóbulos) y su color rojo en otoño. Aparece con ejemplares aislados en otras formaciones. En la dehesa del Perdigano encontramos una de las escasas formaciones (si no la única) en la que el arce es la especie principal.'
                     }
                 ]
@@ -31,7 +31,7 @@
             id: 1,
             forestId: 0,
             map: 'img/serrania-route-map.jpg',
-            name: 'Entorno Tia Perra y Cerviñuelo',
+            name: 'Tia Perra y Cerviñuelo',
             subtitle: 'Ruta corta',
             text:'De las posibles rutas para descubrir las singularidades botánicas de este espacio natural proponemos este recorrido que nos permite conocer una fabulosa formación de Arce de Montepellier, posiblemente la única presente en la península en la que esta especie es dominante. Se trata de una ruta fácil, que nos conduce hasta un entorno de gran belleza en el que junto a los ejemplares adehesados de Arce de gran tamaño y espectacularidad, podemos tambien observar ejemplares de quejigo igualmente magníficos en porte y tamaño así como los cortados de calizas tableadas que el paso del naciente río Trabaque han conformado. Planteamos la ruta de 2 formas posibles, bien de manera más corta, dirigiendonos directamente hacia la zona de la Dehesa, o bien de forma circular en un recorrido más extenso, que nos permite observar otras interesantisimas muestras del paisaje y botánica local, como la salto del agua del Trabaque. Para la ruta corta dejamos el coche poco antes del cruce con El Hosquillo. Seguimos por una pista ancha entre zonas de pinar abierto (podemos observar tanto pino laricio como pino silvestre). Tras poco más de 3 Km estaremos en la Muela, donde poder observar los primeros ejemplares. ',
             directions: 'Desde Cuenca por la CM-2110  y CUV-9113 dirección Las Majadas. Una vez en esta población seguimos dirección El Hosquillo.',
@@ -43,11 +43,11 @@
             pois:
                 [
                     {
-                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque',
+                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque', marker: 'img/trabaque-marker.png',
                         text: 'En el puntal del Perdigano un incipiente Trabaque se precipita al vacio, en un impresionante salto de agua sobre las dolomitas tableadas de decenas metros'
                     },
                     {
-                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier',
+                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier', marker: 'img/arce-marker.png',
                         text: 'El arce de Montepelier es un pequeño arbolillo, muy característico por sus hojas trilobuladas (con tres lóbulos) y su color rojo en otoño. Aparece con ejemplares aislados en otras formaciones. En la dehesa del Perdigano encontramos una de las escasas formaciones (si no la única) en la que el arce es la especie principal.'
                     }
                 ]
@@ -56,7 +56,7 @@
             id: 2,
             forestId: 1,
             map: 'img/tejeranegra-route-map.jpg',
-            name: 'Parque Natural Tejera Negra',
+            name: 'Tejera Negra',
             subtitle: 'Ruta de las Carretas',
             text: 'En el Parque Natural se han definido una serie de rutas siguiendo los cursos de los dos cauces principales del espacio. De las posibles rutas a realizar, la más popular y la que recomendamos es la denominda "Ruta de las Carretas", que en un breve recorrido nos permite adentrarnos en el interior del hayedo.Partimos desde el aparcamiento del Parque (en el que será necesario reservar plaza, especialmente en los meses de otoño). La ruta se inicia siguiendo el curso del río Lillas por una zona de pradería. Una vez atravesamos un pequeño arroyo comenzamos la ascensión por una zona de bosque en la que se localizan pino, melojo y las primeras hayas. Localizamos en este tramo además una antigua carbonera, en la que se muestra la forma de producción artesanal de carbón vegetal. La ascesión continua hasta la pradera de Matarredonda, mientras seguimos observando hayas y aalgún tejo. Desde este punto comenzamos el descenso también por una zona con hayas y melojos, junto con algún ejemplar de tejo, hasta regrasar al punto de origen',
             directions: 'Desde la población de Cantalojas, una pista forestal nos lleva hasta el aparcamiento en el que se inicia la ruta. En las épocas de mayor afluencia del parque (principalmente otoño) es necesario reservar plaza en el aparcamiento.',
@@ -68,11 +68,11 @@
             pois:
                 [
                     {
-                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque',
+                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque', marker: 'img/trabaque-marker.png',
                         text: 'En el puntal del Perdigano un incipiente Trabaque se precipita al vacio, en un impresionante salto de agua sobre las dolomitas tableadas de decenas metros'
                     },
                     {
-                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier',
+                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier', marker: 'img/arce-marker.png',
                         text: 'El arce de Montepelier es un pequeño arbolillo, muy característico por sus hojas trilobuladas (con tres lóbulos) y su color rojo en otoño. Aparece con ejemplares aislados en otras formaciones. En la dehesa del Perdigano encontramos una de las escasas formaciones (si no la única) en la que el arce es la especie principal.'
                     }
                 ]
@@ -93,11 +93,11 @@
             pois:
                 [
                     {
-                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque',
+                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque', marker: 'img/trabaque-marker.png',
                         text: 'En el puntal del Perdigano un incipiente Trabaque se precipita al vacio, en un impresionante salto de agua sobre las dolomitas tableadas de decenas metros'
                     },
                     {
-                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier',
+                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', title: 'Arce de Montpelier', marker: 'img/arce-marker.png',
                         text: 'El arce de Montepelier es un pequeño arbolillo, muy característico por sus hojas trilobuladas (con tres lóbulos) y su color rojo en otoño. Aparece con ejemplares aislados en otras formaciones. En la dehesa del Perdigano encontramos una de las escasas formaciones (si no la única) en la que el arce es la especie principal.'
                     }
                 ]
@@ -106,7 +106,7 @@
             id: 4,
             forestId: 3,
             map: 'img/castanar-route-map.jpg',
-            name: 'Castañar gallego de Hervás',
+            name: 'Castañar de Hervás',
             subtitle: 'Puerto de Honduras',
             text: 'Proponemos la siguiente ruta para conocer este espacio natural. Se trata de una ruta circular que parte de las inmediaciones de la población de Hervás y asciende por la ladera del puerto de Honduras. Una vez alcanzado el punto más elevado de la ruta atravesamos la carretera que asciende al puerto y descendemos por otra ladera, también por el castañar, hasta llegar al punto de inicio de nuevo. El espacio se encuentra recorrido por un elevado número de pistas, por lo que podemos discurrir por muchas de ellas, si bien hemos seleccionado este recorrido porque discurre por zonas densas y bien conservadas del castañar, además de ser circular. Esta ruta podemos observar tanto el castañar gallego como el cercano castañar del Duque también bien conservado así como formaciones de melojo, en las zonas más elevadas.',
             directions: 'El inicio de la ruta se localiza en las inmediaciones de la población de Hervás, en la zona de la Plaza de Toros y la Ermita. Hasta aqui podemos llegar andando desde la población o por la CCV -102.',
@@ -118,11 +118,11 @@
             pois:
                 [
                     {
-                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque',
+                        lat: 40.3616658, lng: -2.0016224, img: 'img/trabaque.jpg', title: 'Salto Trabaque', marker: 'img/trabaque-marker.png',
                         text: 'En el puntal del Perdigano un incipiente Trabaque se precipita al vacio, en un impresionante salto de agua sobre las dolomitas tableadas de decenas metros'
                     },
                     {
-                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg',
+                        lat: 40.358362, lng: -2.009516, img: 'img/arce.jpg', marker: 'img/arce-marker.png',
                         text: 'El arce de Montepelier es un pequeño arbolillo, muy característico por sus hojas trilobuladas (con tres lóbulos) y su color rojo en otoño. Aparece con ejemplares aislados en otras formaciones. En la dehesa del Perdigano encontramos una de las escasas formaciones (si no la única) en la que el arce es la especie principal.'
                     }
                 ]

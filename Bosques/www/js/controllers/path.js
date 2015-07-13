@@ -9,6 +9,6 @@ angular.module('starter.controllers.path', [])
      $scope.goPath = function (gpx, pois) {
          //ui-sref="tab.map"
          SharePathService.prepForBroadcast(gpx, pois);
-         $state.go("tab.map"); $state.go("tab.path"); $state.go("tab.map");
+         $state.go("tab.map");// $state.go("tab.path"); $state.go("tab.map");
      }
  });

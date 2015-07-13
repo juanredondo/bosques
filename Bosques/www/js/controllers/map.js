@@ -21,7 +21,6 @@ angular.module('starter.controllers.map', [])
   
         $scope.$on('$ionicView.enter', function () {
             // Code you want executed every time view is opened
-            console.log('Opened!');
             if (firstRun) {
                 $scope.init();
                 firstRun = false;
@@ -39,23 +38,6 @@ angular.module('starter.controllers.map', [])
              $scope.locate();
         });
 
-       
-
-               
-
-        /*function onClickMarker(title, img, text){
-            $ionicPopup.show({
-                templateUrl: 'templates/popup-template.html',
-                title: title, 
-                scope: $scope,
-                buttons: [
-                  { text: 'Aceptar', onTap: function (e) { return true; } }
-                ]
-            }).then(function () {
-                $scope.text = text;
-                $scope.img = img;
-            });
-        };*/
 
          /**
          * Center map on user's current position and load GPX
@@ -118,6 +100,13 @@ angular.module('starter.controllers.map', [])
             $scope.pathChange();
         };
 
+        CustomMarker = L.Marker.extend({
+            options: {
+                img: 'img',
+                text: 'texto del marker'
+            }
+        });
+
         $scope.pathChange = function () {
             if (SharePathService.path != '') {
                 new L.GPX(SharePathService.path, {
@@ -134,9 +123,39 @@ angular.module('starter.controllers.map', [])
                            .addTo(map);
 
                 SharePathService.pois.forEach(function (poi) {
-                    L.marker([poi.lat, poi.lng], { icon: greenIcon, title: poi.title })
-                        .addTo(map);
-                    //.on('click', onClickMarker(poi.title, poi.img, poi.text));
+                    new CustomMarker([poi.lat, poi.lng], {
+                        icon: L.icon({
+                            iconUrl: poi.marker,
+                            iconSize: [80, 80], // size of the icon
+                            iconAnchor: [40, 80], // point of the icon which will correspond to marker's location
+                            popupAnchor: [-3, 80] // point from which the popup should open relative to the iconAnchor
+                        })
+                        , title: poi.title, img : poi.img, text: poi.text
+                    })
+                    .addTo(map)
+                    .on('click', onClickMarker);
+                });
+            }
+        };
+
+        var lastPopup;
+
+        function onClickMarker(e) {
+            if (lastPopup != e.target.options.title) {
+                lastPopup = e.target.options.title;
+                $scope.title = e.target.options.title;
+                $scope.img = e.target.options.img;
+                $scope.text = e.target.options.text;
+
+                $ionicPopup.show({
+                    templateUrl: 'templates/popup-template.html',
+                    //template: '<img src="' + e.target.options.img + '"/><p>' + e.target.options.text + '</p>',
+                    title: e.target.options.title,
+                    subtitle: e.target.options.text,
+                    scope: $scope,
+                    buttons: [
+                      { text: 'Aceptar', type: 'button-positive', onTap: function (e) { lastPopup = ''; return true; } }
+                    ]
                 });
             }
         };

@@ -40,7 +40,7 @@
 
     }, {
         id: 3,
-        name: 'Castañar Gallego de Hervas',
+        name: 'Castañar de Hervás',
         subtitle: 'Extenso y bien conservado',
         face: 'img/castanar.jpg',
         big: 'img/castanar-big.jpg',
